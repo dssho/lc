@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./css/reg.css">
+	</head>
+<body>
+	<div class="reg">
+		<div class="reg-top">
+			<div class="top_1">
+				<img src="./img/index/logo.png" alt="">
+				<span>已有账号</span>
+				<span>去登录></span>
+			</div>
+		</div>
+		<div class="reg-mid">
+			<table></table>
+			<div class="mid-c">
+      <p>注册乐橙账号</p>
+	<input onfocus="show_phone()" onblur="check_phone()" type="text" id="phone" placeholder="请输入手机号">
+	<span id="phone_msg"></span><br>
+
+	<input onfocus="show_email()" onblur="check_email()" type="text" id="email" placeholder="请输入邮箱">
+	<span id="email_msg"></span><br>
+
+	<input onfocus="show_upwd()" onblur="check_upwd()" type="text" id="upwd" placeholder="请输入密码">
+	<span id="upwd_msg"></span><br>
+
+	<input onblur="check_cpwd()" type="text" id="cpwd" placeholder="请确认密码">
+	<span id="cpwd_msg"></span><br>
+
+		<button onclick="reg()">注册</button>	
+		<div id="r"></div>
+	  </div>
+	 </div>
+	 <div class="bottom_1">
+			<p>版权所有 © 杭州华橙网络科技有限公司 2019 保留一切权利 浙ICP备16023676号-4</p>
+			<p>
+			<img src="./img/index/10_3.png" alt="">   
+			浙公网安备33010802009519号</p>
+	</div>
+	</div>
+		<script>
+		   var a=false;
+			 var b=false;
+			 var c=false;
+			 var d=false;
+		  function show_phone(){
+			  phone_msg.innerHTML="请输入11位数字";
+			}
+//		判断手机号重复
+			function check_phone(){
+			  var $phone=Number(phone.value);
+				if(!$phone){
+				  phone_msg.innerHTML="手机号不能为空";
+					   a=false;
+						 return;
+				}
+			
+          var xhr=new XMLHttpRequest();
+					xhr.onreadystatechange=function(){
+					  if(xhr.readyState==4&&xhr.status==200){
+						   var result=xhr.responseText;
+							//  var app = JSON.parse(result)
+                if(result==0){
+								  phone_msg.innerHTML="正确";
+                        a=true;
+								}else{
+								  phone_msg.innerHTML="错误";
+					         a=false;
+								}
+						}
+					}
+					xhr.open("get","/lc/v1/getPhone/"+$phone,true);
+					xhr.send();
+			}
+      function show_email(){
+			  email_msg.innerHTML="请输入邮箱";
+			}
+//		判断邮箱重复
+			function check_email(){
+			  var $email=email.value;
+				if(!$email){
+				  email_msg.innerHTML="邮箱不能为空";
+					 b=false;
+					 return;
+				}
+				var xhr=new XMLHttpRequest();
+				xhr.onreadystatechange=function(){
+				  if(xhr.readyState==4&&xhr.status==200){
+					  var result=xhr.responseText;
+						if(result==0){
+						  email_msg.innerHTML="正确";
+							b=true;
+						}else{
+						   email_msg.innerHTML="错误";
+							 b=false;
+						}
+					}
+				}
+				xhr.open("get","/lc/v1/getEmail/"+$email,true);
+				xhr.send();
+			}
+			function show_upwd(){
+			  upwd_msg.innerHTML="请输入6-9密码";
+			}
+			function check_upwd(){
+			  var $upwd=upwd.value;
+				if(!$upwd){
+				  upwd_msg.innerHTML="密码不能为空";
+					c=false;
+					return;
+				}else if($upwd.length>=6&&$upwd.length<=9){
+				  upwd_msg.innerHTML="正确";
+					c=true;
+				}else{
+				  upwd_msg.innerHTML="格式错误";
+					c=false;
+				}
+			}
+		
+			function check_cpwd(){
+				 var $upwd=upwd.value;
+			  var $cpwd=cpwd.value;
+				if(!$cpwd){
+				  cpwd_msg.innerHTML="确认密码不能为空";
+					d=false;
+					return;
+				}else if($cpwd!=$upwd){
+				  cpwd_msg.innerHTML="错误";
+					d=false;
+					return;
+				}else{
+				  cpwd_msg.innerHTML="正确";
+					d=true;
+				}
+			}
+//		注册
+     function reg(){
+			 if(!(a==1&&b==true&&c==true&&d==true)){
+			   r.innerHTML="注册失败";
+				 return;
+			 }
+			 var $phone=phone.value;
+			 var $email=email.value;
+			 var $upwd=upwd.value;
+			 var $cpwd=cpwd.value;
+       var xhr=new XMLHttpRequest();
+			 xhr.onreadystatechange=function(){
+			   if(xhr.readyState==4&&xhr.status==200){
+				   var result=xhr.responseText;
+					 if(result!="0"){
+					  alert("注册成功");
+						phone.value="";
+						phone_msg.innerHTML="";
+						email.value="";
+						email_msg.innerHTML="";
+						upwd.value="";
+						upwd_msg.innerHTML="";
+						cpwd.value="";
+						cpwd_msg.innerHTML="";
+					 }
+				 }
+			 }
+			 xhr.open("post","/lc/v1/reg",true);
+			 xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			 var formdata="&phone="+$phone+"&email="+$email+"&upwd="+$upwd+"&cpwd="+$cpwd;
+			 console.log(formdata);
+			 xhr.send(formdata);
+		 } 
+		</script>
+	</body>
+</html>

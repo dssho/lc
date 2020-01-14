@@ -1,0 +1,210 @@
+*{
+  margin:0;
+  padding:0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+.wrap{
+  width:100%;
+  background: #F2F5F8;
+}
+.banner{
+ background: url(../img/fwzc/1.png) 50% no-repeat;
+ width:100%;
+ height:300px;
+ margin-bottom:100px;
+}
+.main-wrap,.support{
+  width:1200px;
+  margin:0 auto;
+}
+.khd,.lxzc{
+  text-align: center;
+  margin-bottom:50px;
+  height:78px;
+}
+.khd h3,.lxzc h3{
+  margin-top:5px;
+  font-size:32px;
+}
+.lca{
+  display: flex;
+  margin-bottom:100px;
+}
+.lca li{
+  width:580px;
+  height:300px;
+}
+.lca li:first-child{
+  margin-right:40px;
+}
+.lca .lcapp{
+  background:url(../img/fwzc/3.png);
+  display: flex;
+}
+.lca .lcapp>img{
+  margin:28px 0 0 90px;
+  height:242px;
+}
+.lca .sectionl,.lca .sectionr{
+  width:296px;
+  margin-left:65px;
+  padding-right: 109px;
+  margin-top: 10px;
+}
+.lca .sectionr{
+  margin-left: 40px;
+  padding-right: 47px;
+}
+.lca .sectionl h4,.lca .sectionr h4{
+  font-size:24px;
+  margin:45px 0px 10px 0px;
+  color:#A45200;
+  font-weight:400;
+}
+.lca .sectionr h4{
+  color:#52007F;
+}
+.lca .sectionl p,.lca .sectionr p{
+  margin:0px 0 25px 0;
+  color:#9C5200;
+  font-size:14px;
+}
+.lca .sectionr p{
+  color:#4D007F;
+}
+.lca .lcappr{
+  background:url(../img/fwzc/6.png);
+  display: flex;
+}
+.lca .lcappr img{
+  margin:46px 36px;
+}
+.lca .lcappr a{
+  display: block;
+  width:160px;
+  height:32px;
+  border:1px solid #4D007F;
+  border-radius:5px;
+  text-align: center;
+  line-height: 32px;
+  margin-top:30px;
+}
+.lca .sectionr p:last-child{
+  font-size:12px;
+  margin-top:10px;
+}
+.support ul{
+  width:1200px;
+  display: flex;
+}
+.support ul li{
+  width:386px;
+  height:150px;
+  background:#fff;
+  text-align: center;
+  font-size:16px;
+  margin:10px;
+  padding:50px;
+}
+.support ul li a{
+  color:#000;
+}
+.support ul li p{
+  margin-top:10px;
+}
+.tyd{
+  width:100%;
+}
+.tyd0{
+  display: flex;
+  width:1200px;
+  margin:0 auto;
+  flex-direction: column;
+}
+.tyd .tyd1{
+  width:1200px;
+  height:350px;
+  background:#fff;
+  display: flex;
+  margin-left:15px;
+  margin-bottom:20px;
+}
+.tyd .tyd1 .tyd1_1{
+  width:520px;
+  padding:90px 0 0 66px;
+}
+.tyd .tyd1 h5{
+  font-size:30px;
+  color: #333333;
+  font-weight: 400;
+}
+.tyd .tyd1 p{
+  font-size:16px;
+  color: #333333;
+  margin:10px 0 58px 0;
+}
+.tyd .tyd1 .sbty{
+  display: flex;
+}
+.tyd .tyd1 .sbty p{
+  font-size:12px;
+}
+.tyd .tyd1 .sbty li{
+  text-align: center;
+}
+.tyd .tyd1 .sbty li+li{
+  margin-left:48px;
+}
+#img1{
+  margin-left:80px;
+}
+.azfw{
+  width:100%;
+}
+.azfw .az{
+  width:1200px;
+  margin:0 auto;
+  background-image: url(../img/fwzc/23.png);
+  height:500px;
+}
+.azfw .az .az_1{
+  text-align: center;
+  color:#fff;
+  height:78px;
+  margin-bottom:50px;
+  padding-top:46px;
+  font-size:32px;
+}
+.azfw .az ul{
+  display: flex;
+  text-align:center;
+  margin:100px 0 0 242px; 
+}
+.azfw .az ul li{
+  width:140px;
+  height:140px;
+  border:1px solid #fff;
+  border-radius:5px;
+  margin-right:150px;
+  padding:27px;
+}
+.azfw .az p{
+  font-size:14px;
+  color:#fff;
+ margin-top:30px;
+  text-align: center;
+}
+.azfw .az a{
+  background: #fff;
+  color:#5c99ff;
+  border-radius: 15px;
+  display: inline-block;
+    width: 104px;
+    height: 28px;
+    line-height: 28px;
+    font-size:14px;
+    text-align: center;
+    margin:12px 0 0 550px;
+}

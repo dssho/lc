@@ -1,0 +1,72 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+a{
+ text-decoration: none;
+}
+.login-top{
+    background-color:#fff;
+}
+.login-top .top_1{
+    width:1200px;
+    margin:0 auto;
+}
+.login-top .top_1 img{
+    width:242px;
+    height:50px;
+    margin-top:20px;
+}
+.login-center{
+    height:520px;
+    background-image:url("../img/login/1.png");
+}
+.login-center .center_1{
+    width:362px;
+    height:387px;
+    float: right;
+    background-color:#fff;
+    margin-top:4%;
+    margin-right:13%;
+    box-shadow:-3px 1px 6px 5px #b6b5b5; 
+}
+.center_1 p{
+    color: #f18d00;
+    font-size: 16px;
+    margin-left: 38px;
+    height: 60px;
+    line-height: 62px;
+}
+.center_1 input,.center_1 button{
+    width:282px;
+    height:42px;
+    margin:0 0 30px 38px;
+}
+.center_1 button{
+    background-color: #ffaa23;
+    color:#fff;
+}
+.center_1 .wchar{
+    width:360px;
+    height:50px;
+}
+.center_1 .wchar span:first-child{
+    float:left;
+    margin-left:30px;
+    line-height:50px;
+}
+.center_1 .wchar span:last-child{
+    float:right;
+    margin-right:30px;
+    line-height:50px;
+    
+}
+.center_1 .wchar span:last-child a{
+    color: #f18d00;
+}
+
+.login-bottom .bottom_1{
+    width:1200px;
+    margin:0 auto;
+    text-align: center;
+}

@@ -1,0 +1,79 @@
+
+.item1{
+  width:100%;
+}
+.item1-sec{
+  width:1200px;
+  margin:0 auto;
+}
+.item1-sec .comment-nav{
+  width:1200px;
+  margin:40px 0 50px;
+  display: flex;
+}
+.item1-sec .comment-nav li{
+  margin-right:20px;
+}
+.item1-sec .comment-nav li a{
+  display:block;
+  width:90px;
+  height:30px;
+  background:#fff;
+  color:#333333;
+  font-size:14px;
+  text-align: center;
+  line-height:30px;
+  border:1px solid #000;
+  border-radius:30px;
+}
+.item1-sec .comment-nav li:nth-child(2) a{
+  background:#f00;
+  color:#fff;
+}
+.item1-sec .comment-list li{
+  height:146px;
+  width:1200px;
+  margin-bottom:40px;
+  display: flex;
+}
+.list-left{
+  width:80px;
+}
+.list-left>img{
+  width:50px;
+}
+.list-right{
+  width:1120px;
+}
+.list-right .lr-t span{
+  float:right;
+  color:#999999;
+}
+.list-right .qxd{
+  color:#999999;
+  font-size:14px;
+  margin-bottom:30px;
+}
+.list-right span{
+  color:#333333;
+  font-size:14px;
+}
+.limit-b,.limit-b ul{
+  float:right;
+  display: flex;
+}
+.limit-b li{
+  width:35.5px;
+  height:34px;
+  border:1px solid #000;
+  background:#fff;
+  text-align: center;
+  line-height:34px;
+}
+.limit-b li+li{
+  border-left:0px;
+}
+.limit-b .active{
+  background:#f00;
+  color:#fff;
+}
